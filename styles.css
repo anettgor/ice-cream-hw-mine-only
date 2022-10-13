@@ -1,5 +1,8 @@
-* {
-  font-family: "DM Sans";
+body,
+input,
+button {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
 }
 
 .container {
@@ -15,16 +18,16 @@
   }
 }
 
-button {
+.btn {
+  font-family: "DM Sans", sans-serif;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  font-family: "DM Sans";
   background: white;
   border-radius: 22px;
   width: 159px;
   height: 44px;
 }
-button:hover,
-button:focus {
+.btn:hover,
+.btn:focus {
   background: rgba(255, 121, 146, 1);
 }
 
