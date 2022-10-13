@@ -4,17 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./modern-normalize.css" />
     <link rel="stylesheet" href="./styles.css" />
     <title>Document</title>
   </head>
   <body style="position: relative" class="background">
-    <section class="container">
-      <button type="button" class="btn" data-modal-open>Buy now</button>
-    </section>
+    <!-- <section class="container"> -->
+    <button type="button" class="btn" data-modal-open>Buy now</button>
+    <!--    
     <footer class="container" style="width: 100%; max-width: 500px">
        Lorem, ipsum dolor sit amet consectetur
        adipisicing elit. Magnam officiis
@@ -101,96 +104,80 @@
       eligendi sunt nemo obcaecati. Eaque non
       dicta dolorum!
       
-
+ </section>
     </footer>
-    <!-- <div class="container"> -->
-      <div class="backdrop is-hidden" data-modal>
-        <div class="modal__container">
-          <div class="modal">
-            <button type="button" class="modal__close-btn" data-modal-close>
-              <svg width="30px" height="30px">
-                <use href="./icon.svg#close-icon" width="20" height="20"></use>
-              </svg>
-            </button>
+    <div class="container"> -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal__container">
+        <div class="modal">
+          <button type="button" class="modal__close-btn" data-modal-close>
+            <svg width="30px" height="30px">
+              <use href="./icon.svg#close-icon" width="20" height="20"></use>
+            </svg>
+          </button>
 
+          <div class="modal__product-wrapper">
+            <legend>Choose your product</legend>
 
-
-            <section class="modal__product-wrapper">
-              <span>Choose your product</span> 
-
-              <div class="modal__product-container">
-          <label class="modal__item">
-            <input type="checkbox" class="modal__item-checkbox"/>
-            <figure class="modal__option-inner">
-           <img class="modal__image" src="./home-pic1.png" > 
-          <figcaption class="modal__name">icecream</figcaption>
-        </figure>          
-          </label>
-
+            <div class="modal__product-container">
+              <label class="modal__item">
+                <input type="checkbox" class="modal__item-checkbox" />
+                <span class="modal__option-inner">
+                  <img class="modal__image" src="./home-pic1.png" />
+                  <span class="modal__name">icecream</span>
+                </span>
+              </label>
+              <label class="modal__item">
+                <input type="checkbox" class="modal__item-checkbox" />
+                <span class="modal__option-inner">
+                  <img class="modal__image" src="./home-pic1.png" />
+                  <span class="modal__name">icecream</span>
+                </span>
+              </label>
+              <label class="modal__item">
+                <input type="checkbox" class="modal__item-checkbox" />
+                <span class="modal__option-inner">
+                  <img class="modal__image" src="./home-pic1.png" />
+                  <span class="modal__name">icecream</span>
+                </span>
+              </label>
+            </div>
           </div>
-        </section>
 
+          <!-- done - bez buttona -->
 
+          <form class="modal__form">
+            <label class="modal__label">
+              <input type="text" name="name" class="modal__input" required />
 
+              <span class="modal__tag">Imie i nazwisko</span>
+              <i class="modal__tag-decoration"></i>
+            </label>
 
+            <label class="modal__label">
+              <input type="text" class="modal__input" required />
+              <span class="modal__tag">ulica</span>
+              <i class="modal__tag-decoration"></i>
+            </label>
 
+            <label class="modal__label">
+              <input type="tel" name="phone" class="modal__input" required />
+              <span class="modal__tag">telefon</span>
+              <i class="modal__tag-decoration"></i>
+            </label>
+            <label class="modal__label">
+              <input type="email" name="email" class="modal__input" required />
+              <span class="modal__tag">e-mail</span>
+              <i class="modal__tag-decoration"></i>
+            </label>
 
-
-
-        <!-- done - bez buttona -->
-           
-              <form class="modal__form">
-                <label class="modal__label">
-                  <input
-                    type="text"
-                    name="name"
-                    class="modal__input"
-                    required
-                  />
-
-                  <span class="modal__tag">Imie i nazwisko</span>
-                  <i class="modal__tag-decoration"></i>
-                </label>
-
-                <label class="modal__label">
-                  <input
-                    type="text"
-                    class="modal__input"
-                    required
-                  />
-                  <span class="modal__tag">ulica</span>
-                  <i class="modal__tag-decoration"></i>
-                </label>
-
-                <label class="modal__label">
-                  <input
-                    type="tel"
-                    name="phone"
-                    class="modal__input"
-                    required
-                  />
-                  <span class="modal__tag">telefon</span>
-                  <i class="modal__tag-decoration"></i>
-                </label>
-                <label class="modal__label">
-                  <input
-                    type="email"
-                    name="email"
-                    class="modal__input"
-                    required
-                  />
-                  <span class="modal__tag">e-mail</span>
-                  <i class="modal__tag-decoration"></i>
-                </label>
-
-                <button type="submit" class="btn">Proceed to checkout</button>
-        </form>
-
-          </div>
+            <button type="submit" class="btn">Proceed to checkout</button>
+          </form>
         </div>
       </div>
-
-      <script src="./modal.js"></script>
     </div>
+
+    <script src="./modal.js"></script>
+    <!-- </div> -->
   </body>
 </html>
