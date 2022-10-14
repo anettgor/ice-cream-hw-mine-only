@@ -34,7 +34,7 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 100px rgba(255, 184, 202, 1) inset;
 }
 
-.container {
+/* .container {
   width: 100%;
   max-width: 1200px;
   padding-left: 15px;
@@ -45,19 +45,37 @@ select:-webkit-autofill:focus {
       margin: 0 auto;
     }
   }
-}
+} */
 
 .btn {
-  font-family: "DM Sans", sans-serif;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: white;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
   border-radius: 22px;
-  width: 159px;
-  height: 44px;
+  padding: 5px 20px;
+  max-width: 160px;
+  background: rgba(255, 121, 146, 1);
+  background-image: linear-gradient(
+    -60deg,
+    transparent,
+    transparent 40%,
+    #ffffff44 40%,
+    #ffffff44 60%,
+    transparent 60%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  background-position-x: 150%;
 }
 .btn:hover,
 .btn:focus {
-  background: rgba(255, 121, 146, 1);
+  background-position-x: -150%;
+  transition: background-position-x 1500ms;
+
+  /* background: rgba(255, 121, 146, 1); */
 }
 
 /*  modal input section */
@@ -79,11 +97,6 @@ select:-webkit-autofill:focus {
   pointer-events: none;
 }
 
-.modal__container {
-  position: fixed;
-  padding: 0 auto;
-}
-
 .modal {
   position: fixed;
   top: 50%;
@@ -95,7 +108,6 @@ select:-webkit-autofill:focus {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(5px);
   width: 80vw;
-
   max-width: 600px;
   min-height: 609px;
   padding: 40px;
@@ -123,7 +135,6 @@ select:-webkit-autofill:focus {
   flex-direction: column;
   justify-content: center;
   gap: 40px;
-  margin-top: 40px;
 }
 
 .modal__label {
@@ -206,7 +217,19 @@ select:-webkit-autofill:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 20px;
+}
+
+.modal__image {
+  width: 20%;
+}
+
+@media screen and (min-width: 480px) {
+  .modal__product-container {
+    flex-wrap: nowrap;
+  }
+  .modal__image {
+    width: 50%;
+  }
 }
 .modal__item {
   position: relative;
@@ -218,12 +241,13 @@ select:-webkit-autofill:focus {
 }
 
 .modal__option-inner {
-  display: block;
+  display: inline-block;
   position: relative;
   text-align: center;
   cursor: pointer;
   border-radius: 5px;
   margin: 0;
+
   border: 2px solid transparent;
   border-image-slice: 1;
 
@@ -241,11 +265,27 @@ select:-webkit-autofill:focus {
   transform: scale(90%);
 }
 
-.modal__image {
-  width: 30%;
+.modal__name {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
-.modal__name {
-  width: 100%;
-  display: block;
+.modal__title {
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.modal__flexbox {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
