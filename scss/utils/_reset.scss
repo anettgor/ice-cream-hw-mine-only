@@ -1,0 +1,35 @@
+body,
+input,
+button {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  background-image: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-radius: 10px;
+  padding-left: 10px;
+  -webkit-text-fill-color: rgba(211, 19, 66, 1);
+  box-shadow: 0 0 0 100px rgba(255, 184, 202, 1) inset;
+  -webkit-box-shadow: 0 0 0 100px rgba(255, 184, 202, 1) inset;
+}

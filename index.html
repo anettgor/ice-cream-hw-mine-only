@@ -10,14 +10,17 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./modern-normalize.css" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./css/modern-normalize.css" />
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+      <link rel="stylesheet" href="./css/main.min.css" />
     <title>Document</title>
   </head>
   <body style="position: relative" class="background">
     <!-- <section class="container"> -->
-    <button type="button" class="btn" data-modal-open>Buy now</button>
-    <!--    
+    <button type="button" class="btn" data-modal-open>Buy now
+      <svg><use href="./icon.svg#arrow"></use></svg>
+    </button>
+       
     <footer class="container" style="width: 100%; max-width: 500px">
        Lorem, ipsum dolor sit amet consectetur
        adipisicing elit. Magnam officiis
@@ -106,7 +109,7 @@
       
  </section>
     </footer>
-    <div class="container"> -->
+    <div class="container">
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal__close-btn" data-modal-close>
@@ -166,12 +169,13 @@
               <span class="modal__tag">e-mail</span>
               <i class="modal__tag-decoration"></i>
             </label>
+            
           </form>
           <button type="submit" class="btn">Proceed to checkout</button>
         </div>
       </div>
     </div>
-    <script src="./modal.js"></script>
+    <script src="./js/modal.js"></script>
     <!-- </div> -->
   </body>
 </html>
