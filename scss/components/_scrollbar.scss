@@ -1,0 +1,31 @@
+::-webkit-scrollbar {
+  width: 0.3em;
+  height: 0.3em;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 184, 202, 1);
+  border-radius: 0.5em;
+  margin-block: 0.3em;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: rgba(255, 184, 202, 1);
+  border-radius: 0.5em;
+  margin-block: 1em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 121, 146, 1);
+  border-radius: 0.5em;
+
+  &:hover {
+    background: rgb(232, 78, 106);
+  }
+}
+
+@supports (scroll-color: rgba(255, 121, 146, 1) rgba(255, 184, 202, 1)) {
+  * {
+    scrollbar-color: rgba(255, 121, 146, 1) rgba(255, 184, 202, 1);
+  }
+}

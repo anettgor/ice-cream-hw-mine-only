@@ -1,0 +1,31 @@
+.btn {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  border-radius: 22px;
+  padding: 5px 20px;
+  margin-bottom: 20px;
+  max-width: 160px;
+  cursor: pointer;
+  background: rgba(255, 121, 146, 1);
+  background-image: linear-gradient(
+    -60deg,
+    transparent,
+    transparent 40%,
+    #ffffff44 40%,
+    #ffffff44 60%,
+    transparent 60%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  background-position-x: 150%;
+
+  &:hover,
+  &:focus {
+    background-position-x: -150%;
+    transition: background-position-x 1500ms;
+  }
+}

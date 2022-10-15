@@ -160,6 +160,7 @@ select:-webkit-autofill:focus {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 50px;
 }
 
 .modal__tag-decoration {
@@ -169,7 +170,6 @@ select:-webkit-autofill:focus {
   background: white;
   bottom: -5px;
 }
-
 .modal__label .modal__tag-decoration::before {
   content: "";
   position: absolute;
@@ -181,10 +181,7 @@ select:-webkit-autofill:focus {
   display: none;
   /* transition: 2s; */
 }
-
-.modal__input:valid ~ .modal__tag-decoration::before,
-.modal__input:focus ~ .modal__tag-decoration::before,
-.modal__input:hover ~ .modal__tag-decoration::before {
+.modal__input:valid ~ .modal__tag-decoration::before, .modal__input:focus ~ .modal__tag-decoration::before, .modal__input:hover ~ .modal__tag-decoration::before {
   left: 0;
   display: initial;
 }
@@ -213,5 +210,60 @@ select:-webkit-autofill:focus {
   }
   .modal__image {
     width: 50%;
+  }
+  .modal__flexbox {
+    gap: 10px;
+  }
+}
+.btn {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  border-radius: 22px;
+  padding: 5px 20px;
+  margin-bottom: 20px;
+  max-width: 160px;
+  cursor: pointer;
+  background: rgb(255, 121, 146);
+  background-image: linear-gradient(-60deg, transparent, transparent 40%, rgba(255, 255, 255, 0.2666666667) 40%, rgba(255, 255, 255, 0.2666666667) 60%, transparent 60%, transparent 100%);
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  background-position-x: 150%;
+}
+.btn:hover, .btn:focus {
+  background-position-x: -150%;
+  transition: background-position-x 1500ms;
+}
+
+::-webkit-scrollbar {
+  width: 0.3em;
+  height: 0.3em;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(255, 184, 202);
+  border-radius: 0.5em;
+  margin-block: 0.3em;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: rgb(255, 184, 202);
+  border-radius: 0.5em;
+  margin-block: 1em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 121, 146);
+  border-radius: 0.5em;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(232, 78, 106);
+}
+
+@supports (scroll-color: rgb(255, 121, 146) rgb(255, 184, 202)) {
+  * {
+    scrollbar-color: rgb(255, 121, 146) rgb(255, 184, 202);
   }
 }/*# sourceMappingURL=main.css.map */

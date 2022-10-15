@@ -132,6 +132,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 50px;
   }
 }
 
@@ -141,30 +142,30 @@
   height: 2px;
   background: white;
   bottom: -5px;
-}
 
-.modal__label .modal__tag-decoration::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: -100%;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 184, 202, 1),
-    rgba(255, 121, 146, 1),
-    rgba(255, 184, 202, 1)
-  );
-  animation: linear 10s linear infinite;
-  display: none;
-  /* transition: 2s; */
-}
+  .modal__label &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 184, 202, 1),
+      rgba(255, 121, 146, 1),
+      rgba(255, 184, 202, 1)
+    );
+    animation: linear 10s linear infinite;
+    display: none;
+    /* transition: 2s; */
+  }
 
-.modal__input:valid ~ .modal__tag-decoration::before,
-.modal__input:focus ~ .modal__tag-decoration::before,
-.modal__input:hover ~ .modal__tag-decoration::before {
-  left: 0;
-  display: initial;
+  .modal__input:valid ~ &::before,
+  .modal__input:focus ~ &::before,
+  .modal__input:hover ~ &::before {
+    left: 0;
+    display: initial;
+  }
 }
 
 @keyframes linear {
@@ -187,10 +188,16 @@
 }
 
 @media screen and (min-width: 480px) {
-  .modal__product-container {
-    flex-wrap: nowrap;
-  }
-  .modal__image {
-    width: 50%;
+  .modal {
+    &__product-container {
+      flex-wrap: nowrap;
+    }
+    &__image {
+      width: 50%;
+    }
+
+    &__flexbox {
+      gap: 10px;
+    }
   }
 }
