@@ -1,6 +1,6 @@
 ::-webkit-scrollbar {
-  width: 0.3em;
-  height: 0.3em;
+  width: 0.5em;
+  height: 0.5em;
 }
 
 ::-webkit-scrollbar-track {
@@ -11,12 +11,15 @@
 
 .modal::-webkit-scrollbar-track {
   background: rgba(255, 184, 202, 1);
-  border-radius: 0.5em;
+  //   border-radius: 0.5em;
   margin-block: 1em;
+  width: 0.1em;
+  height: 0.1em;
 }
 
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 121, 146, 1);
+  border: 0.2em solid rgba(255, 121, 146, 50%);
   border-radius: 0.5em;
 
   &:hover {
@@ -24,8 +27,9 @@
   }
 }
 
-@supports (scroll-color: rgba(255, 121, 146, 1) rgba(255, 184, 202, 1)) {
+@supports (scrollbar-color: rgba(255, 121, 146, 1) rgba(255, 184, 202, 1)) {
   * {
     scrollbar-color: rgba(255, 121, 146, 1) rgba(255, 184, 202, 1);
+    scrollbar-width: thin;
   }
 }
