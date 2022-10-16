@@ -70,10 +70,10 @@ select:-webkit-autofill:focus {
   height: 0;
   position: absolute;
   background: none;
-  fill: white;
+  fill: rgb(255, 255, 255);
   border: none;
   top: 15px;
-  right: 30px;
+  right: 40px;
   transition-property: fill;
   transition: 300ms ease-in-out;
 }
@@ -95,7 +95,7 @@ select:-webkit-autofill:focus {
   width: 150%;
   max-width: 500px;
   background-color: transparent;
-  color: white;
+  color: rgb(255, 255, 255);
   border: none;
   outline: none;
   left: 0;
@@ -135,7 +135,7 @@ select:-webkit-autofill:focus {
 }
 .modal__item-checkbox:checked ~ .modal__option-inner {
   /* border-color: rgba(211, 19, 66, 1); */
-  border-image-source: linear-gradient(to left, rgb(255, 184, 202), rgb(255, 121, 146), rgb(255, 184, 202));
+  border-image-source: linear-gradient(to left, rgb(255, 184, 202), rgb(225, 121, 146), rgb(255, 184, 202));
   transform: scale(90%);
 }
 .modal__name {
@@ -146,8 +146,8 @@ select:-webkit-autofill:focus {
   white-space: nowrap;
 }
 .modal__title {
-  color: white;
-  font-family: "Titan One";
+  color: rgb(255, 255, 255);
+  font-family: Titan One, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -176,7 +176,7 @@ select:-webkit-autofill:focus {
   width: 100%;
   height: 100%;
   left: -100%;
-  background: linear-gradient(90deg, rgb(255, 184, 202), rgb(255, 121, 146), rgb(255, 184, 202));
+  background: linear-gradient(90deg, rgb(255, 184, 202), rgb(225, 121, 146), rgb(255, 184, 202));
   animation: linear 10s linear infinite;
   display: none;
   /* transition: 2s; */
@@ -197,48 +197,19 @@ select:-webkit-autofill:focus {
 .modal__product-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
 }
 
 .modal__image {
-  width: 20%;
+  width: 40%;
 }
 
 @media screen and (min-width: 480px) {
-  .modal__product-container {
-    flex-wrap: nowrap;
-  }
   .modal__image {
     width: 50%;
   }
-  .modal__flexbox {
-    gap: 50px;
-  }
 }
-.btn {
-  font-family: "DM Sans";
-  align-self: center;
-  color: white;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 21px;
-  border-radius: 22px;
-  padding: 10px 37px;
-  margin-bottom: 20px;
-  max-width: 160px;
-  cursor: pointer;
-  background: rgb(212, 20, 67);
-  background-image: linear-gradient(-60deg, transparent, transparent 40%, rgba(255, 255, 255, 0.2666666667) 40%, rgba(255, 255, 255, 0.2666666667) 60%, transparent 60%, transparent 100%);
-  background-size: 200% 100%;
-  background-repeat: no-repeat;
-  background-position-x: 150%;
-}
-.btn:hover, .btn:focus {
-  background-position-x: -150%;
-  transition: background-position-x 1500ms;
-}
-
 ::-webkit-scrollbar {
   width: 0.5em;
   height: 0.5em;
@@ -258,17 +229,40 @@ select:-webkit-autofill:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(255, 121, 146);
+  background: rgb(225, 121, 146);
   border: 0.2em solid rgba(255, 121, 146, 0.5);
   border-radius: 0.5em;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(232, 78, 106);
+  background: rgb(199, 19, 62);
 }
 
-@supports (scrollbar-color: rgb(255, 121, 146) rgb(255, 184, 202)) {
+@supports (scrollbar-color: rgb(225, 121, 146) rgb(255, 184, 202)) {
   * {
-    scrollbar-color: rgb(255, 121, 146) rgb(255, 184, 202);
+    scrollbar-color: rgb(225, 121, 146) rgb(255, 184, 202);
     scrollbar-width: thin;
   }
+}
+.btn {
+  font-family: DM Sans;
+  align-self: center;
+  color: rgb(255, 255, 255);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  border-radius: 22px;
+  padding: 10px 37px;
+  max-width: 160px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background: rgb(212, 20, 67);
+  background-image: linear-gradient(-60deg, transparent, transparent 40%, rgba(255, 255, 255, 0.2666666667) 40%, rgba(255, 255, 255, 0.2666666667) 60%, transparent 60%, transparent 100%);
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  background-position-x: 150%;
+}
+.btn:hover, .btn:focus {
+  background-position-x: -150%;
+  transition: background-position-x 1500ms;
 }/*# sourceMappingURL=main.css.map */
